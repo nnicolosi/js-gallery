@@ -6,8 +6,8 @@ import { unpkgPathPlugin } from './plugins/unpkg-path-plugin';
 
 const App = () => {
     const ref = useRef<any>();
+    const iframe = useRef<any>();
     const [input, setInput] = useState('');
-    const [code, setCode] = useState('');
 
     const startService = async () => {
         ref.current = await esbuild.startService({
@@ -25,6 +25,10 @@ const App = () => {
             return;
         }
 
+        // reset the iframe
+        iframe.current.srcDoc = html;
+
+        // bundle user code
         const result = await ref.current.build({
             entryPoints: ['index.js'],
             bundle: true,
@@ -39,15 +43,36 @@ const App = () => {
             }
         });
 
-        setCode(result.outputFiles[0].text);
+        // send user code to the iframe
+        iframe.current.contentWindow.postMessage(result.outputFiles[0].text, '*');
     };
+
+    const html = `
+        <html>
+        <head></head>
+        <body>
+            <div id="root"></div>
+            <script>
+                window.addEventListener('message', (event) => {
+                    try {
+                        eval(event.data);
+                    } catch (err) {
+                        const root = document.querySelector('#root');
+                        root.innerHTML = '<div style="color: red;"><h1>Runtime Error</h1>' + err + '</div>';
+                        console.error(err);
+                    }
+                }, false);
+            </script>
+        </body>
+        </html> 
+    `;
 
     return <div>
         <textarea value={input} onChange={e => setInput(e.target.value)}></textarea>
         <div>
             <button onClick={onClick}>Submit</button>
         </div>
-        <pre>{code}</pre>
+        <iframe ref={iframe} title="preview" sandbox="allow-scripts" srcDoc={html} />
     </div>
 }
 
