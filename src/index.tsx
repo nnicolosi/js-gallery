@@ -1,8 +1,10 @@
+import 'bulmaswatch/superhero/bulmaswatch.min.css';
 import * as esbuild from 'esbuild-wasm';
 import { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { fetchPlugin } from './plugins/fetch-plugin';
 import { unpkgPathPlugin } from './plugins/unpkg-path-plugin';
+import CodeEditor from './components/code-editor';
 
 const App = () => {
     const ref = useRef<any>();
@@ -67,13 +69,16 @@ const App = () => {
         </html> 
     `;
 
-    return <div>
-        <textarea value={input} onChange={e => setInput(e.target.value)}></textarea>
+    return (
         <div>
-            <button onClick={onClick}>Submit</button>
+            <CodeEditor onChange={(value) => setInput(value)} />
+            <textarea value={input} onChange={e => setInput(e.target.value)}></textarea>
+            <div>
+                <button onClick={onClick}>Submit</button>
+            </div>
+            <iframe ref={iframe} title="preview" sandbox="allow-scripts" srcDoc={html} />
         </div>
-        <iframe ref={iframe} title="preview" sandbox="allow-scripts" srcDoc={html} />
-    </div>
+    );
 }
 
 ReactDOM.render(<App/>, document.querySelector('#root'));
