@@ -3,7 +3,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  transition: opacity 100ms;
+  transition: opacity 150ms ease-in-out 50ms;
   z-index: 30;
 }
 
