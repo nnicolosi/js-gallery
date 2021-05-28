@@ -16,11 +16,11 @@
 .add-cell .divider {
   border-bottom: 1px solid gray;
   bottom: 50%;
-  left: 3%;
+  left: 1%;
   position: absolute;
-  right: 3%;
+  right: 1%;
   top: 50%;
-  width: 94%;
+  width: 98%;
   z-index: -1;
 }
 
