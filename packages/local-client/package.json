@@ -1,24 +1,21 @@
 {
-  "name": "local-client",
+  "name": "@js-gallery/local-client",
   "version": "0.1.0",
+  "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
   "private": true,
-  "devDependencies": {
-    "@babel/core": "^7.14.0",
-    "@testing-library/jest-dom": "^5.12.0",
-    "@types/jest": "^26.0.23"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@monaco-editor/react": "3.7.5",
-    "@testing-library/react": "^11.2.6",
-    "@testing-library/user-event": "^12.8.3",
-    "@types/jscodeshift": "0.7.2",
-    "@types/node": "^12.20.12",
-    "@types/prettier": "^2.2.3",
-    "@types/react": "^17.0.5",
-    "@types/react-dom": "^17.0.3",
-    "@types/react-redux": "7.1.15",
-    "@types/react-resizable": "^1.7.2",
     "@uiw/react-md-editor": "2.1.1",
     "axios": "0.21.1",
     "bulmaswatch": "^0.8.1",
@@ -39,11 +36,19 @@
     "typescript": "^4.2.4",
     "web-vitals": "^1.1.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.23",
+    "@types/jscodeshift": "0.7.2",
+    "@types/node": "^12.20.12",
+    "@types/prettier": "^2.2.3",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-redux": "7.1.15",
+    "@types/react-resizable": "^1.7.2"
   },
   "eslintConfig": {
     "extends": [
