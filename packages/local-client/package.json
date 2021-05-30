@@ -1,5 +1,5 @@
 {
-  "name": "javascript-ide",
+  "name": "local-client",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
