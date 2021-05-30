@@ -5,6 +5,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "build"
+  ],
   "private": true,
   "scripts": {
     "start": "react-scripts start",
