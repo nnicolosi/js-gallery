@@ -16,7 +16,7 @@
     "eject": "react-scripts eject",
     "prepublishOnly": "npm run build"
   },
-  "dependencies": {
+  "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@monaco-editor/react": "3.7.5",
     "@uiw/react-md-editor": "2.1.1",
@@ -37,9 +37,7 @@
     "redux": "4.0.5",
     "redux-thunk": "2.3.0",
     "typescript": "^4.2.4",
-    "web-vitals": "^1.1.2"
-  },
-  "devDependencies": {
+    "web-vitals": "^1.1.2",
     "@babel/core": "^7.14.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
