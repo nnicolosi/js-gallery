@@ -25,10 +25,7 @@ export const useCumulativeCode = (cellId: string) => {
             };
         `;
 
-        const showFunctionNoOp = `
-            var show = () => {};
-        `;
-
+        const showFunctionNoOp = 'var show = () => {}';
         const orderedCells = order.map(id => data[id]);
         const cumulativeCode = [];
 
