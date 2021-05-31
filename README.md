@@ -49,6 +49,12 @@ The application should now be running and available at `http://localhost:4005`
 
 <br/>
 
+When developing, remember to use lerna (not npm) to add new dependencies when necessary:
+
+`$> lerna add <some dependency> [--dev] [--exact] --scope=<package name>`
+
+<br/>
+
 ---
 
 ## Publishing to NPM
