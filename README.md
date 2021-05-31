@@ -29,6 +29,4 @@ Therefore, the command specified above is equivalent to the following command:
 
 <br/>
 
-Here is what the application looks like in the browser:
-
-![](images/default.png)
+![](./images/default.png)
