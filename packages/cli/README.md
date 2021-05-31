@@ -1,12 +1,8 @@
-# JavaScript Gallery
+# JavaScript Gallery (CLI Component)
 
-JavaScript Gallery is a browser-based application for writing, executing, rendering, and documenting JavaScript and JSX snippets.  It consists of three components:
+JavaScript Gallery is a browser-based application for writing, executing, rendering, and documenting JavaScript and JSX snippets.  
 
-- CLI
-- Local API
-- Local Client
-
-The CLI Component is the entrypoint into the JavaScript Gallery application.  It starts up an instance of the Local API Component with the arguments (e.g. filename) specified by the user.  The Local API Component in turn serves up the compiled assets for the Local Client Component and handles the file-based persistence of any number of JavaScript galleries that the user creates and maintains.
+This package represents the CLI Component, which is the entrypoint into the JavaScript Gallery application.  It starts up an instance of the Local API Component with the arguments (e.g. filename) specified by the user.  The Local API Component in turn serves up the compiled assets for the Local Client Component and handles the file-based persistence of any number of JavaScript galleries that the user creates and maintains.
 
 The application is started from the command line as follows:
 
@@ -31,4 +27,5 @@ Therefore, the command specified above is equivalent to the following command:
 
 Here is what the application looks like in the browser:
 
-![](images/default.png)
+![](../../images/default.png)
+
