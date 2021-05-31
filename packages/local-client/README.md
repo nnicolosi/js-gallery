@@ -4,4 +4,4 @@ The Local Client Component is a SPA implemented with the React framework.  It pr
 
 Here is what the application looks like in the browser:
 
-![](../images/default.png)
+![](../../images/default.png)
