@@ -30,3 +30,29 @@ Therefore, the command specified above is equivalent to the following command:
 <br/>
 
 ![](./images/default.png)
+
+<br/>
+
+---
+
+## Running Locally for Development
+
+From the project root, run the following command:
+
+`$> npm start`
+
+From the `/packages/cli/dist` directory, run the following command:
+
+`$> node index.js serve`
+
+The application should now be running and available at `http://localhost:4005`
+
+<br/>
+
+---
+
+## Publishing to NPM
+
+From the project root, run the following command and respond to the prompts:
+
+`$> lerna publish --no-push`
