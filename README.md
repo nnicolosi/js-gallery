@@ -8,7 +8,7 @@ JavaScript Gallery is a browser-based application for writing, executing, render
 
 The CLI Component is the entrypoint into the JavaScript Gallery application.  It starts up an instance of the Local API Component with the arguments (e.g. filename) specified by the user.  The Local API Component in turn serves up the compiled assets for the Local Client Component and handles the file-based persistence of any number of JavaScript galleries that the user creates and maintains.
 
-The application is started from the command line as follows:
+Assuming npm version 14.17.0 or greater is installed, the application is started from the command line as follows:
 
 `$> npx js-gallery serve`
 
